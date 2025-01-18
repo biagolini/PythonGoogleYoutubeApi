@@ -4,7 +4,7 @@ This project serves as an educational resource for developers interested in lear
 
 ## Project Overview
 
-The repository is structured to showcase examples of Google/YouTube API interactions. The project emphasizes clean, reusable code and practical workflows for integrating Google APIs into your applications.
+The repository is structured to showcase examples of both public API interactions and authenticated operations requiring user consent. The project emphasizes clean, reusable code and practical workflows for integrating Google APIs into your applications.
 
 ## Project Structure
 
@@ -86,17 +86,22 @@ If you plan to experiment or develop using Jupyter Notebook, install the necessa
 pip install notebook ipykernel
 ```
 
+### Configuring the `.env` File
+
+To run the project, you need to configure a `.env` file with the following structure:
+
+```
+API_KEY=xxxx
+CLIENT_ID=xxxx.apps.googleusercontent.com
+CLIENT_SECRET=xxxx
+```
+
+Replace `xxxx` with your actual API key, client ID, and client secret obtained from the Google Cloud Console.
+
 ## Contributing
 
-Contributions are welcome! If you’d like to contribute, feel free to:
-
-- Submit issues or bug reports
-- Create pull requests
-- Fork the repository and suggest enhancements
+Feel free to submit issues, create pull requests, or fork the repository to help improve the project.
 
 ## License and Disclaimer
 
-This project is licensed under the MIT License. You are free to use, modify, and distribute the code. However, the project authors and maintainers are not responsible for any misuse or damages caused by the use of this software. Use it at your own discretion and risk.
-
----
-
+This project is open-source and available under the MIT License. You are free to copy, modify, and use the project as you wish. However, any responsibility for the use of the code is solely yours. Please use it at your own risk and discretion.
