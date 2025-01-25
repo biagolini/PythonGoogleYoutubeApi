@@ -176,3 +176,6 @@ cython_debug/
 # Google Credentials Secret
 client_secret.json
 token.json
+
+# Output folder
+YouTube_Data/**

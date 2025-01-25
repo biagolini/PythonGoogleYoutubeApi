@@ -18,7 +18,8 @@ The goal is to deliver clean, reusable code that developers can adapt to their o
 ```
 .
 ├── .env                # Environment variables for configuration
-├── scripts/            # Python scripts for YouTube automation
+├── YouTube_Data        # Folder for storing output data
+├── scripts.py          # Python scripts for YouTube automation
 ├── requirements.txt    # List of dependencies for the project
 └── client_secret.json  # Google OAuth credentials (if applicable)
 ```
@@ -100,7 +101,16 @@ Install the required Python packages:
 pip install -r requirements.txt
 ```
 
-### 5. (Optional) Install Jupyter Notebook
+### 5. Create Output Folder
+
+Create the output folder for local storage of data:
+
+
+```bash
+mkdir YouTube_Data
+```
+
+### 6. (Optional) Install Jupyter Notebook
 
 If you plan to experiment using Jupyter Notebook, install its dependencies:
 
