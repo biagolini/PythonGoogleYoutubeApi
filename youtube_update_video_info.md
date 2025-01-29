@@ -1,6 +1,6 @@
 # YouTube Video Information Updater
 
-The `youtube_update_video_info.py` script is designed to update video details such as titles, descriptions, tags, and localized metadata for videos in your YouTube channel. 
+The `youtube_update_video_info.py` script is designed to update video details such as titles, descriptions, tags, and localized metadata for videos in your YouTube channel.
 
 ## Purpose
 This script automates the process of updating video information using the YouTube Data API. It works with a JSON configuration file where you specify the updates for each video.
@@ -23,7 +23,8 @@ This script automates the process of updating video information using the YouTub
                 "title": "Localized Title",
                 "description": "Localized description"
             }
-        }
+        },
+        "scheduledPublishTime": "2025-02-20T16:30:00Z"
     }
 }
 ```
@@ -44,5 +45,7 @@ This script automates the process of updating video information using the YouTub
 ## Notes
 - Ensure the `token.json` and `client_secret.json` files are in the same directory as the script to handle authentication.
 - Make sure the YouTube Data API is enabled in your Google Cloud project.
+- Videos scheduled for publication must be set to `private` before they can be scheduled using `scheduledPublishTime`.
 
 Feel free to contribute or report issues in the repository!
+

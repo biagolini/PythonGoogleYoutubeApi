@@ -57,7 +57,7 @@ def main():
         try:
             # Check if the video exists
             video_request = youtube.videos().list(
-                part="snippet,localizations",
+                part="snippet,localizations,status",
                 id=video_id
             )
             video_response = video_request.execute()
@@ -70,6 +70,7 @@ def main():
             video_details = video_response["items"][0]
             update_snippet = video_details.get("snippet", {})
             update_localizations = video_details.get("localizations", {})
+            update_status = video_details.get("status", {})
 
             # Update title, description, and tags if provided
             if "default" in video_info:
@@ -87,13 +88,19 @@ def main():
                         "description": localization.get("description", update_localizations.get(lang, {}).get("description", ""))
                     }
 
+            # Set scheduled publish time if provided
+            if "scheduledPublishTime" in video_info:
+                update_status["publishAt"] = video_info["scheduledPublishTime"]
+                update_status["privacyStatus"] = "private"  # The video must be private before scheduling
+
             # Perform the update
             youtube.videos().update(
-                part="snippet,localizations",
+                part="snippet,localizations,status",
                 body={
                     "id": video_id,
                     "snippet": update_snippet,
-                    "localizations": update_localizations
+                    "localizations": update_localizations,
+                    "status": update_status
                 }
             ).execute()
 
