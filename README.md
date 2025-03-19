@@ -105,7 +105,6 @@ pip install -r requirements.txt
 
 Create the output folder for local storage of data:
 
-
 ```bash
 mkdir YouTube_Data
 ```
@@ -117,6 +116,15 @@ If you plan to experiment using Jupyter Notebook, install its dependencies:
 ```bash
 pip install notebook ipykernel
 ```
+
+### 7. (Optional) Add Virtual Environment to Jupyter
+
+Ensure the virtual environment is recognized by Jupyter:
+
+```bash
+python -m ipykernel install --user --name=venv --display-name "Python (venv)"
+```
+
 
 ---
 

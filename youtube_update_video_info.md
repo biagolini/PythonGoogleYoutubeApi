@@ -24,7 +24,7 @@ This script automates the process of updating video information using the YouTub
                 "description": "Localized description"
             }
         },
-        "scheduledPublishTime": "2025-02-20T16:30:00Z"
+        "scheduledPublishTime": "2025-03-20T16:30:00Z"
     }
 }
 ```
